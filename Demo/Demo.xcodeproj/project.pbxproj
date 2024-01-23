@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,6 +21,9 @@
 		86AEDCED1D5D1DB70030232E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86AEDCEC1D5D1DB70030232E /* Assets.xcassets */; };
 		86AEDCF01D5D1DB70030232E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86AEDCEE1D5D1DB70030232E /* LaunchScreen.storyboard */; };
 		86C0ABA21D5E816600F76BD6 /* TacoDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C0ABA11D5E816600F76BD6 /* TacoDialogView.swift */; };
+		CD2C44C12B5E6F6D0005E085 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CD2C44C02B5E6F6D0005E085 /* libz.tbd */; };
+		CD2C44C32B5E6F7A0005E085 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CD2C44C22B5E6F7A0005E085 /* libc++.tbd */; };
+		CD5D7BEC2B5F5BED002ED149 /* callsot.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5D7BEB2B5F5BED002ED149 /* callsot.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +98,11 @@
 		86AEDCF11D5D1DB70030232E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86C0AB9F1D5E814600F76BD6 /* TacoDialogView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TacoDialogView.xib; sourceTree = "<group>"; };
 		86C0ABA11D5E816600F76BD6 /* TacoDialogView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TacoDialogView.swift; sourceTree = "<group>"; };
+		CD2C44C02B5E6F6D0005E085 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		CD2C44C22B5E6F7A0005E085 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		CD5D7BEA2B5F5BED002ED149 /* callsot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = callsot.h; sourceTree = "<group>"; };
+		CD5D7BEB2B5F5BED002ED149 /* callsot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = callsot.m; sourceTree = "<group>"; };
+		CD5D7BED2B5F5C2F002ED149 /* Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Demo-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +110,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD2C44C32B5E6F7A0005E085 /* libc++.tbd in Frameworks */,
+				CD2C44C12B5E6F6D0005E085 /* libz.tbd in Frameworks */,
 				22FE3FA821193CB90017303D /* SwiftMessages.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,6 +131,8 @@
 		6AB98897E817EE976DD72852 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CD2C44C22B5E6F7A0005E085 /* libc++.tbd */,
+				CD2C44C02B5E6F6D0005E085 /* libz.tbd */,
 				22774C1420B8461900813732 /* Messages.framework */,
 			);
 			name = Frameworks;
@@ -147,7 +159,10 @@
 		86AEDCE41D5D1DB70030232E /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				CD5D7BEA2B5F5BED002ED149 /* callsot.h */,
+				CD5D7BEB2B5F5BED002ED149 /* callsot.m */,
 				86AEDCE51D5D1DB70030232E /* AppDelegate.swift */,
+				CD5D7BED2B5F5C2F002ED149 /* Demo-Bridging-Header.h */,
 				86AEDCE91D5D1DB70030232E /* Main.storyboard */,
 				86AEDCE71D5D1DB70030232E /* ViewController.swift */,
 				8642F4351D5F7F540061BDCD /* ExploreViewController.swift */,
@@ -176,6 +191,7 @@
 				86AEDCE01D5D1DB70030232E /* Resources */,
 				22774C2520B8461A00813732 /* Embed App Extensions */,
 				22FE3FB021193CB90017303D /* Embed Frameworks */,
+				CD2C44BF2B5E6F340005E085 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -201,7 +217,7 @@
 					86AEDCE11D5D1DB70030232E = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 7588T3DZY6;
-						LastSwiftMigration = 1020;
+						LastSwiftMigration = 1500;
 					};
 				};
 			};
@@ -260,6 +276,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		CD2C44BF2B5E6F340005E085 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$CONFIGURATION\" == \"SotRelease\" ]];then\n  sh \"$SOURCE_ROOT/sotsdk/project-script/sot_package.sh\" \"$SOURCE_ROOT/sotsdk/project-script/sotconfig.sh\" \"$SOURCE_ROOT/sotsaved/$CONFIGURATION\" Demo SwiftMessages\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		86AEDCDE1D5D1DB70030232E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -272,6 +309,7 @@
 				86AEDCE61D5D1DB70030232E /* AppDelegate.swift in Sources */,
 				226FA5E61F506993004CB2BC /* CountedViewController.swift in Sources */,
 				86C0ABA21D5E816600F76BD6 /* TacoDialogView.swift in Sources */,
+				CD5D7BEC2B5F5BED002ED149 /* callsot.m in Sources */,
 				22F27953210D0FDE00273E7F /* ViewControllersViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,7 +453,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 3.0;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -426,13 +465,19 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 7588T3DZY6;
 				INFOPLIST_FILE = Demo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = it.swiftkick.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Demo/Demo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -443,17 +488,116 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 7588T3DZY6;
 				INFOPLIST_FILE = Demo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = it.swiftkick.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Demo/Demo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
+		};
+		CD2C44B92B5E6C960005E085 /* SotRelease */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 3.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = SotRelease;
+		};
+		CD2C44BA2B5E6C960005E085 /* SotRelease */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 7588T3DZY6;
+				EXCLUDED_ARCHS = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				GCC_PREPROCESSOR_DEFINITIONS = "USE_SOT=1";
+				INFOPLIST_FILE = Demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_CFLAGS = (
+					"-sotmodule",
+					"$(PRODUCT_NAME)",
+					"-sotconfig",
+					"$(SRCROOT)/sotsdk/project-script/sotconfig.sh",
+				);
+				OTHER_LDFLAGS = (
+					"-sotmodule",
+					"$(PRODUCT_NAME)",
+					"$(SRCROOT)/sotsdk/libs/libsot_web.a",
+					"-sotsaved",
+					"$(SRCROOT)/sotsaved/$(CONFIGURATION)/$(CURRENT_ARCH)",
+					"-sotconfig",
+					"$(SRCROOT)/sotsdk/project-script/sotconfig.sh",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = it.swiftkick.Demo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "\"sotmodule=$(PRODUCT_NAME) sotconfig=\\\"$(SRCROOT)/sotsdk/project-script/sotconfig.sh\"";
+				SWIFT_OBJC_BRIDGING_HEADER = "Demo/Demo-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = SotRelease;
 		};
 /* End XCBuildConfiguration section */
 
@@ -463,6 +607,7 @@
 			buildConfigurations = (
 				86AEDCF21D5D1DB70030232E /* Debug */,
 				86AEDCF31D5D1DB70030232E /* Release */,
+				CD2C44B92B5E6C960005E085 /* SotRelease */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -472,6 +617,7 @@
 			buildConfigurations = (
 				86AEDCF51D5D1DB70030232E /* Debug */,
 				86AEDCF61D5D1DB70030232E /* Release */,
+				CD2C44BA2B5E6C960005E085 /* SotRelease */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
